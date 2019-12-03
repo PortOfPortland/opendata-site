@@ -1,0 +1,555 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Port GIS Data Hub</title>
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
+  integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+<!-- CSS -->
+<link href="assets/css/main.css" rel="stylesheet">
+<link href="assets/css/filterizr.css" rel="stylesheet" type="text/css">
+<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+
+<!-- JQuery -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+  integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+<!-- D3 -->
+<script src="//d3js.org/d3.v3.min.js"></script>
+<script src="//d3js.org/topojson.v1.min.js"></script>
+
+<!-- PhotoSwipe Resources -->
+<link rel="stylesheet" href="assets/photoswipe/src/css/img-tile.css">
+<link rel="stylesheet" href="assets/photoswipe/dist/photoswipe.css">
+<link rel="stylesheet" href="assets/photoswipe/dist/default-skin/default-skin.css">
+<script src="assets/photoswipe/dist/photoswipe.min.js"></script>
+<script src="assets/photoswipe/dist/photoswipe-ui-default.min.js"></script>
+
+</head>
+
+<body id="page-top">
+
+  <!--NOTIFICATION MODAL-->
+  <script type="text/javascript">
+    $(window).on('load', function () {
+      $('#disclaimerModal').modal('show');
+    });
+  </script>
+  <!-- Disclaimer Modal -->
+  <!-- Disclaimer Modal -->
+  <div id="disclaimerModal" class="modal" role="dialog">
+    <div class="modal-dialog">
+
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" style="font-size: 16; color: #1d1d1d">Disclaimer:</h4>
+        </div>
+        <div class="modal-body" style="    font-size: 12px; color: #6d6d6d;">
+
+          Port of Portland geospatial data is gathered, maintained and primarily used for internal
+          reference and analysis, and is only updated as resources permit.
+          Geospatial data refers to data and information referenced to a location on the Earth's
+          surface such as maps, charts, air photos, satellite images, cadastre and land and water
+          surveys, in digital or hard copy form.
+          <br><br>
+          Geospatial data may be gathered and maintained by more than one person or department within
+          the Port, and data distributed by one person or department may not reflect the most recent
+          data available from the Port or from other sources.
+          Port geospatial data is not intended for survey or engineering purposes or to describe the
+          authoritative or precise location of boundaries, fixed human works, or the shape and contour
+          of the earth.
+          <br><br>
+          The Port makes no warranty of any kind, expressed or implied, including any warranty of
+          merchantability, fitness for a particular purpose, or any other matter with respect to its
+          geospatial data.
+          <br><br>
+          The Port is not responsible for possible errors, omissions, misuse, or misrepresentation of
+          its geospatial data.
+          <br><br>
+          Port geospatial data is not intended as a final determination of such features as existing
+          or proposed infrastructure, conservation areas, or the boundaries of regulated areas such as
+          wetlands, all of which are subject to surveying or delineation and may change over time.
+          No representation is made concerning the legal status of any apparent route of access
+          identified in geospatial data.
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal" style="background-color: #b3b3b3;">Agree</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--NOTIFICATION MODAL-->
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand">Port of Portland GIS</a>
+
+      <div>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item mx-0 mx-lg-1">
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="https://github.com/portofportlandgis"
+              target="_blank"><i class="fab fa-github"></i>
+              GitHub</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Masthead -->
+  <header class="masthead bg-primary text-center">
+
+    <div class="container d-flex align-items-center flex-column">
+      <div class="divider-custom">
+
+        <!-- <i class="fas fa-globe fa-7x"></i> -->
+
+        <div id="globe" style="position:absolute; padding-top: 1px; z-index: 1; overflow: hidden;">
+          <script src="assets/js/globe.js"></script>
+        </div>
+
+      </div>
+
+      <script>
+        var showText = function (target, message, index, interval) {
+          if (index < message.length) {
+            $(target).append(message[index++]);
+            setTimeout(function () { showText(target, message, index, interval); }, interval);
+          }
+        }
+
+        $(function () {
+          showText("#msg", "Open data. Open code. Open source.", 0, 100);
+        });
+      </script>
+
+      <p id="msg" class="masthead-subheading" style="padding-top: 10px; color: #363738;"></p>
+
+    </div>
+  </header>
+
+  <!-- Portfolio Section -->
+  <section class="page-section portfolio" id="portfolio">
+    <div class="container">
+
+      <!-- Portfolio Section Heading -->
+      <h2 class="page-section-heading text-center text-secondary mb-0">Open Data</h2>
+
+      <!-- Icon Divider -->
+      <div class="divider-custom">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon">
+          <i style="font-size: large;" class="fas fa-layer-group"></i>
+        </div>
+        <div class="divider-custom-line"></div>
+      </div>
+
+      <p style="color: #525252" class="text-center">Get data directly from <a
+          href="https://github.com/portofportlandgis/open-data-json-test" target="_blank" style="color: #1d1d1d;"><i
+            class="fab fa-github"></i> GitHub</a>, or search for layers below:</p>
+
+      <!-- Portfolio Grid Items -->
+
+      <div class="container">
+        <!-- Filter Controls - Simple Mode -->
+        <!-- Search control -->
+        <!-- <div class="row search-row">
+            <input type="text" class="fltr-controls filtr-search" name="filtr-search" data-search />
+          </div> -->
+
+        <div class="row">
+
+          <!-- search box -->
+          <input type="text" placeholder="Search" class="fltr-controls filtr-search" name="filtr-search" data-search />
+          &nbsp
+          <!-- catagory buttons -->
+          <ul class="simplefilter" style="font-size: .75rem">
+            <li class="fltr-controls active" data-filter="all">All</li>
+            <li class="fltr-controls" data-filter="1">Environmental</li>
+            <li class="fltr-controls" data-filter="2">Floorplans</li>
+            <li class="fltr-controls" data-filter="3">Airport</li>
+            <li class="fltr-controls" data-filter="4">Utility</li>
+          </ul>
+        </div>
+
+        <div class="row push-down">
+          <!-- This is the set up of a basic gallery, your items must have the categories they belong to in a data-category
+              attribute, which starts from the value 1 and goes up from there -->
+
+          <!-- Image size 400 x 600 -->
+
+          <div class="filtr-container">
+            <div class="filtr-item" data-category="1" data-sort="mitigation">
+              <img class="img-responsive" src="assets/img/mitigation.png" alt="mitigation" />
+              <span class="item-desc"><a
+                  href="https://raw.githubusercontent.com/portofportlandgis/open-data-json-test/master/monster.json"
+                  download="monster.json" target="_blank">Mitigation Sites</a></span>
+            </div>
+            <div class="filtr-item" data-category="1" data-sort="Natural Resource Inventory">
+              <img class="img-responsive" src="assets/img/nri.png" alt="Natural Resource Inventory" />
+              <span class="item-desc"><a
+                  href="https://raw.githubusercontent.com/portofportlandgis/open-data-json-test/master/monster.json"
+                  download="monster.json" target="_blank">Natural Resource Inventory</a></span>
+            </div>
+            <div class="filtr-item" data-category="1" data-sort="Wetlands">
+              <img class="img-responsive" src="assets/img/wetlands.png" alt="Wetlands" />
+              <span class="item-desc"><a
+                  href="https://raw.githubusercontent.com/portofportlandgis/open-data-json-test/master/monster.json"
+                  download="monster.json" target="_blank">Wetlands</a></span>
+            </div>
+            <div class="filtr-item" data-category="2" data-sort="PDX Enplane Floorplans">
+              <img class="img-responsive" src="assets/img/floorplan-1.png" alt="PDX Enplane Floorplans" />
+              <span class="item-desc"><a
+                  href="https://raw.githubusercontent.com/portofportlandgis/open-data-json-test/master/monster.json"
+                  download="monster.json" target="_blank">PDX Enplane Floorplans</a></span>
+            </div>
+            <div class="filtr-item" data-category="2" data-sort="PDX Deplane Floorplans">
+              <img class="img-responsive" src="assets/img/floorplan-2.png" alt="PDX Deplane Floorplans" />
+              <span class="item-desc"><a
+                  href="https://raw.githubusercontent.com/portofportlandgis/open-data-json-test/master/monster.json"
+                  download="monster.json" target="_blank">PDX Deplane Floorplans</a></span>
+            </div>
+            <div class="filtr-item" data-category="2" data-sort="PDX Mezzanine Floorplans">
+              <img class="img-responsive" src="assets/img/floorplan-3.png" alt="PDX Mezzanine Floorplans" />
+              <span class="item-desc"><a
+                  href="https://raw.githubusercontent.com/portofportlandgis/open-data-json-test/master/monster.json"
+                  download="monster.json" target="_blank">PDX Mezzanine Floorplans</a></span>
+            </div>
+            <div class="filtr-item" data-category="3" data-sort="PDX Noise Contours 1982">
+              <img class="img-responsive" src="assets/img/pdx-noise-1982.png" alt="PDX Noise Contours 1982" />
+              <span class="item-desc"><a
+                  href="https://raw.githubusercontent.com/portofportlandgis/open-data-json-test/master/monster.json"
+                  download="monster.json" target="_blank">PDX Noise Contours 1982</a></span>
+            </div>
+            <div class="filtr-item" data-category="3" data-sort="PDX Noise Contours 1990">
+              <img class="img-responsive" src="assets/img/pdx-noise-1990.png" alt="PDX Noise Contours 1990" />
+              <span class="item-desc"><a
+                  href="https://raw.githubusercontent.com/portofportlandgis/open-data-json-test/master/monster.json"
+                  download="monster.json" target="_blank">PDX Noise Contours 1990</a></span>
+            </div>
+            <div class="filtr-item" data-category="3" data-sort="PDX Noise Contours 1994">
+              <img class="img-responsive" src="assets/img/pdx-noise-1994.png" alt="PDX Noise Contours 1994" />
+              <span class="item-desc"><a
+                  href="https://raw.githubusercontent.com/portofportlandgis/open-data-json-test/master/monster.json"
+                  download="monster.json" target="_blank">PDX Noise Contours 1994</a></span>
+            </div>
+            <div class="filtr-item" data-category="3" data-sort="PDX Noise Contours 2008">
+              <img class="img-responsive" src="assets/img/pdx-noise-2008.png" alt="PDX Noise Contours 2008" />
+              <span class="item-desc"><a
+                  href="https://raw.githubusercontent.com/portofportlandgis/open-data-json-test/master/monster.json"
+                  download="monster.json" target="_blank">PDX Noise Contours 2008</a></span>
+            </div>
+            <div class="filtr-item" data-category="1, 4" data-sort="Storm Water Pipes">
+              <img class="img-responsive" src="assets/img/storm-pipes.png" alt="Storm Water Pipes" />
+              <span class="item-desc"><a
+                  href="https://raw.githubusercontent.com/portofportlandgis/open-data-json-test/master/monster.json"
+                  download="monster.json" target="_blank">Storm Water Pipes</a></span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="assets/js/jquery.filterizr.min.js"></script>
+
+<script type="text/javascript">
+  const simpleFilters = document.querySelectorAll('.simplefilter li');
+  Array.from(simpleFilters).forEach((node) =>
+    node.addEventListener('click', function () {
+      simpleFilters.forEach((filter) => filter.classList.remove('active'));
+      node.classList.add('active');
+    })
+  );
+
+  // Expose this filterizr as a global for debugging
+  window.filterizr = new window.Filterizr('.filtr-container', {
+    controlsSelector: '.fltr-controls',
+    gutterPixels: 15,
+    spinner: {
+      enabled: true,
+    },
+  });
+</script>
+
+</section>
+
+<!-- About Section -->
+<!-- <section class="page-section bg-primary text-white mb-0" id="about"> -->
+<section class="page-section bg-primary text-white mb-0">
+
+  <div class="container">
+
+    <!-- About Section Heading -->
+    <!-- <h2 class="page-section-heading text-center text-uppercase text-white">code</h2> -->
+    <h2 class="page-section-heading text-center text-secondary mb-0">Open Code</h2>
+
+    <!-- Icon Divider -->
+    <!-- <div class="divider-custom divider-light"> -->
+    <div class="divider-custom">
+      <div class="divider-custom-line"></div>
+      <div class="divider-custom-icon">
+        <i style="font-size: large;" class="fas fa-code"></i>
+      </div>
+      <div class="divider-custom-line"></div>
+    </div>
+
+    <p style="color: #525252" class="text-center">Start building your own GIS applications with the Port's open source code.</p>
+
+    <p style="color: #525252" class="text-center">Find our code at
+        <a href="https://github.com/portofportlandgis" target="_blank" style="color: #1d1d1d;"><i
+          class="fab fa-github"></i> GitHub</a> , or view the examples below.</p>
+
+    <br>
+  </div>
+
+  <hr>
+
+  <!-- PhotoSwipe Tiles -->
+
+  <!-- Portmap tiles -->
+  <div class="container">
+
+    <p style="margin-left: 10px;font-size: x-large; color: #363738;"><a href="https://github.com/portofportlandgis/portmap" target="_blank" style="color:#1c8de0"> Portmap</a></p>
+
+    <p style="margin-left: 10px; color: #363738;">A responsive web map application template using Bootstrap and Mapbox GL.</p>
+    <p style="margin-left: 10px; color: #363738;">Check out the <a href="https://cdettlaff.github.io./" target="_blank" style="color:#1c8de0">demo.</a></p>
+
+    <div class="row" style="justify-content: left;">
+
+      <div id="demo-test-gallery" class="demo-gallery">
+
+        <a href="assets/img/portmap.png" data-size="1600x1068" data-med-size="1024x683">
+          <img src="assets/img/portmap.png" alt="" />
+          <figure>something about this PortGIS image 444</figure>
+        </a>
+
+
+        <a href="assets/img/layer-tree.png" data-size="1600x1068" data-med-size="1024x683">
+          <img src="assets/img/layer-tree.png" alt="" />
+          <figure>something about this PortGIS image 666</figure>
+        </a>
+
+
+        <a href="assets/img/search.png" data-size="1600x1068" data-med-size="1024x683">
+          <img src="assets/img/search.png" alt="" />
+          <figure>something about this PortGIS image 888</figure>
+        </a>
+
+        <a href="assets/img/draw.png" data-size="1600x1068" data-med-size="1024x683">
+          <img src="assets/img/draw.png" alt="" />
+          <figure>something about this PortGIS image 777</figure>
+        </a>
+
+
+        <a href="assets/img/location.png" data-size="1600x1068" data-med-size="1024x683">
+          <img src="assets/img/location.png" alt="" />
+          <figure>something about this PortGIS image</figure>
+        </a>
+
+
+        <a href="assets/img/search.png" data-size="1600x1068" data-med-size="1024x683">
+          <img src="assets/img/search.png" alt="" />
+          <figure>something about this PortGIS image 888</figure>
+        </a>
+
+        <a href="assets/img/print.png" data-size="1600x1068" data-med-size="1024x683">
+          <img src="assets/img/print.png" alt="" />
+          <figure>something about this PortGIS image 777</figure>
+        </a>
+
+
+        <a href="assets/img/bookmark.png" data-size="1600x1068" data-med-size="1024x683">
+          <img src="assets/img/bookmark.png" alt="" />
+          <figure>something about this PortGIS image</figure>
+        </a>
+
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+<!-- Portmap Analyst tiles -->
+  <div class="container">
+
+      <p style="margin-left: 10px;font-size: x-large; color: #363738;"><a href="https://github.com/portofportlandgis/portmap-analyst" target="_blank" style="color:#1c8de0">Portmap Analyst</a></p>
+  
+      <p style="margin-left: 10px; color: #363738;">A responsive web map application template using Bootstrap and Mapbox GL</p>
+  
+      <div class="row" style="justify-content: left;">
+  
+        <div id="demo-test-gallery" class="demo-gallery">
+  
+          <a href="assets/img/portmap.png" data-size="1600x1068" data-med-size="1024x683">
+            <img src="assets/img/portmap.png" alt="" />
+            <figure>something about this PortGIS image 444</figure>
+          </a>
+  
+  
+          <a href="assets/img/portmap.png" data-size="1600x1068" data-med-size="1024x683">
+            <img src="assets/img/portmap.png" alt="" />
+            <figure>something about this PortGIS image 666</figure>
+          </a>
+  
+  
+          <a href="assets/img/portmap.png" data-size="1600x1068" data-med-size="1024x683">
+            <img src="assets/img/portmap.png" alt="" />
+            <figure>something about this PortGIS image 888</figure>
+          </a>
+  
+          <a href="assets/img/portmap.png" data-size="1600x1068" data-med-size="1024x683">
+            <img src="assets/img/portmap.png" alt="" />
+            <figure>something about this PortGIS image 777</figure>
+          </a>
+  
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+    <!-- getElevation API -->
+  <div class="container">
+
+      <p style="margin-left: 10px;font-size: x-large; color: #363738;"><a href="https://github.com/portofportlandgis/getElevationAPI" target="_blank" style="color:#1c8de0">getElevation API</a></p>
+  
+      <p style="margin-left: 10px; color: #363738;">Get global elevation data using Mapbox and AWS Lambda.</p>
+  
+      <div class="row" style="justify-content: left;">
+  
+        <div id="demo-test-gallery" class="demo-gallery">
+  
+          <a href="assets/img/portmap.png" data-size="1600x1068" data-med-size="1024x683">
+            <img src="assets/img/portmap.png" alt="" />
+            <figure>something about this PortGIS image 444</figure>
+          </a>
+  
+  
+          <a href="assets/img/portmap.png" data-size="1600x1068" data-med-size="1024x683">
+            <img src="assets/img/portmap.png" alt="" />
+            <figure>something about this PortGIS image 666</figure>
+          </a>
+  
+  
+          <a href="assets/img/portmap.png" data-size="1600x1068" data-med-size="1024x683">
+            <img src="assets/img/portmap.png" alt="" />
+            <figure>something about this PortGIS image 888</figure>
+          </a>
+  
+          <a href="assets/img/portmap.png" data-size="1600x1068" data-med-size="1024x683">
+            <img src="assets/img/portmap.png" alt="" />
+            <figure>something about this PortGIS image 777</figure>
+          </a>
+  
+        </div>
+      </div>
+    </div>
+
+  
+    <hr>
+
+  <div class="section section--first">
+
+    <div id="gallery" class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="pswp__bg"></div>
+
+      <div class="pswp__scroll-wrap">
+
+        <div class="pswp__container">
+          <div class="pswp__item"></div>
+          <div class="pswp__item"></div>
+          <div class="pswp__item"></div>
+        </div>
+
+        <div class="pswp__ui pswp__ui--hidden">
+
+          <div class="pswp__top-bar">
+
+            <div class="pswp__counter"></div>
+
+            <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+            <!-- <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+            <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button> -->
+
+            <div class="pswp__preloader">
+              <div class="pswp__preloader__icn">
+                <div class="pswp__preloader__cut">
+                  <div class="pswp__preloader__donut"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+          <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+          <div class="pswp__caption">
+            <div class="pswp__caption__center">
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+    </div>
+
+</section>
+
+<!-- Footer -->
+<footer class="footer text-center">
+  <div class="container">
+    <div class="row">
+      <!-- Footer Icons -->
+      <div class="col-lg-4 mb-5 mb-lg-0">
+        <h4 class="text-uppercase mb-4">connect</h4>
+        <a class="btn btn-outline-light btn-social mx-1" href="mailto:gis@portofportland.com">
+          <i class="fas fa-envelope"></i>
+        </a>
+        <a class="btn btn-outline-light btn-social mx-1" href="https://github.com/portofportlandgis" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</footer>
+
+<!-- Copyright Section -->
+<section class="copyright py-4 text-center text-white">
+  <div class="container">
+    <small>Copyright &copy; Port of Portland</small>
+  </div>
+</section>
+
+<!-- photoswipe for photo tiles -->
+<script src="assets/photoswipe/src/js/img-tile.js"></script>
+
+<!-- Bootstrap -->
+<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+  integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

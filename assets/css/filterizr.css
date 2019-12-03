@@ -1,0 +1,153 @@
+body {
+  margin-top: 1rem;
+}
+img {
+  max-width: 100%;
+}
+
+.filtr-item {
+  width: 50%;
+}
+
+@media screen and (min-width: 767px) {
+  .filtr-item {
+    width: 33.3%;
+  }
+}
+
+@media screen and (min-width: 991px) {
+  .filtr-item {
+    width: 25%;
+  }
+}
+
+.item-desc {
+  background-color: #c3c3c3;
+  color: white;
+  position: absolute;
+  /* text-transform: uppercase; */
+  text-align: left;
+  padding: 0.5rem;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 14px;
+}
+
+/* Filter controls */
+.simplefilter,
+.multifilter,
+.sortandshuffle,
+.search-row {
+  padding-left: 0rem;
+}
+.simplefilter li,
+.multifilter li,
+.sortandshuffle li {
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  /* text-transform: uppercase; */
+  padding: .5rem .5rem;
+}
+.simplefilter li {
+  background-color: #c3c3c3;
+  /* height: 21px; */
+  color: #ffffff;
+}
+.simplefilter li.active {
+  background-color: #1c8de0;
+  color: white;
+  font-weight: 900;
+}
+.multifilter li {
+  background-color: #4b9eff;
+}
+.multifilter li.active {
+  background-color: #2265b4;
+}
+
+/* Shuffle and sort controls */
+select {
+  padding: 1rem 1rem;
+  text-transform: uppercase;
+}
+.sortandshuffle .shuffle-btn {
+  background-color: #dec800;
+}
+.sortandshuffle .sort-btn {
+  background-color: #de0000;
+}
+.sortandshuffle .sort-btn.active {
+  background-color: #9d0000;
+}
+
+/* Search control */
+.filtr-search {
+  padding: 2px;
+  /* text-transform: uppercase; */
+  margin-bottom: .70rem;
+  font-size: .75rem;
+  height: 29px;
+}
+
+/* Colored divs */
+.block {
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.75) inset;
+  color: white;
+  text-align: center;
+  height: 80px;
+  position: relative;
+}
+.block > .text {
+  display: inline-block;
+  font-size: 24px;
+  font-weight: bold;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.block.xs {
+  height: 40px;
+}
+.block.md {
+  height: 120px;
+}
+.block.lg {
+  height: 160px;
+}
+.block.purple {
+  background-color: purple;
+}
+.block.yellow {
+  background-color: #dec800;
+}
+.block.red {
+  background-color: crimson;
+}
+.block.green {
+  background-color: lightgreen;
+}
+.block.blue {
+  background-color: #4b9eff;
+}
+
+/* Helpers */
+.push-down {
+  margin-bottom: 50px;
+}
+
+/* .filtr-container {
+  margin-top: 25px;
+} */
+
+.filtr-container,
+.color-container-1,
+.color-container-2,
+.color-container-3,
+.color-container-4 {
+  display: none;
+  transition: height 500ms ease-out;
+}
