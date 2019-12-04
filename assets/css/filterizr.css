@@ -32,7 +32,7 @@ img {
   bottom: 0;
   left: 0;
   right: 0;
-  font-size: 14px;
+  font-size: 1rem;
 }
 
 /* Filter controls */
@@ -87,9 +87,9 @@ select {
 .filtr-search {
   padding: 2px;
   /* text-transform: uppercase; */
-  margin-bottom: .70rem;
-  font-size: .75rem;
-  height: 29px;
+  margin-bottom: 1.2rem;
+  font-size: 1rem;
+  height: 40px;
 }
 
 /* Colored divs */
