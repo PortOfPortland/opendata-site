@@ -28,16 +28,16 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
   integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 
-<!-- D3 -->
-<script src="//d3js.org/d3.v3.min.js"></script>
-<script src="//d3js.org/topojson.v1.min.js"></script>
+<!-- slider -->
+<link href="assets/css/slider.css" rel="stylesheet" type="text/css">
+
 
 <!-- PhotoSwipe Resources -->
-<link rel="stylesheet" href="assets/photoswipe/src/css/img-tile.css">
+<!-- <link rel="stylesheet" href="assets/photoswipe/src/css/img-tile.css">
 <link rel="stylesheet" href="assets/photoswipe/dist/photoswipe.css">
 <link rel="stylesheet" href="assets/photoswipe/dist/default-skin/default-skin.css">
 <script src="assets/photoswipe/dist/photoswipe.min.js"></script>
-<script src="assets/photoswipe/dist/photoswipe-ui-default.min.js"></script>
+<script src="assets/photoswipe/dist/photoswipe-ui-default.min.js"></script> -->
 
 </head>
 
@@ -88,7 +88,8 @@
 
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal" style="background-color: #b3b3b3;">Agree</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal"
+            style="background-color: #b3b3b3;">Agree</button>
         </div>
       </div>
     </div>
@@ -115,11 +116,11 @@
 
   <!-- Masthead -->
   <header class="masthead bg-primary text-center">
- 
+
     <div class="container d-flex align-items-center flex-column">
       <div class="divider-custom" style="margin: 1rem">
 
-          <img src="assets/img/logo.svg" height="80" width="80">
+        <img src="assets/img/logo.svg" height="80" width="80">
 
 
       </div>
@@ -137,7 +138,7 @@
         });
       </script>
 
-      <p id="msg" class="masthead-subheading" style="padding-top: 10px; color: #363738;"></p>
+      <p id="msg" class="masthead-subheading" style="padding-top: 10px; color: #363738; margin-bottom: 2rem;"></p>
 
     </div>
   </header>
@@ -310,10 +311,11 @@
       <div class="divider-custom-line"></div>
     </div>
 
-    <p style="color: #525252" class="text-center">Start building your own GIS applications with the Port's open source code.</p>
+    <p style="color: #525252" class="text-center">Start building your own GIS applications with the Port's open source
+      code.</p>
 
     <p style="color: #525252" class="text-center">Find our code at
-        <a href="https://github.com/portofportlandgis" target="_blank" style="color: #1d1d1d;"><i
+      <a href="https://github.com/portofportlandgis" target="_blank" style="color: #1d1d1d;"><i
           class="fab fa-github"></i> GitHub</a> , or check out the examples below.</p>
 
     <br>
@@ -326,190 +328,99 @@
   <!-- Portmap tiles -->
   <div class="container">
 
-    <p style="margin-left: 10px;font-size: x-large; color: #363738;"><a href="https://github.com/portofportlandgis/portmap" target="_blank" style="color:#1c8de0"> Portmap</a></p>
+    <!-- About Section Heading -->
+    <h2 class="page-section-heading text-center text-secondary mb-0"><a
+        href="https://github.com/portofportlandgis/portmap" target="_blank" style="color:#1c8de0"> Portmap</a></h2>
 
-    <p style="margin-left: 10px; color: #363738;">A responsive web map application template using Bootstrap and Mapbox GL.</p>
-    <p style="margin-left: 10px; color: #363738;">Check out the <a href="https://cdettlaff.github.io./" target="_blank" style="color:#1c8de0">demo.</a></p>
+   <br>
 
-    <div class="row" style="justify-content: left;">
+    <p style="color: #525252" class="text-center">A responsive web map application template using Bootstrap and MapboxGL
+    </p>
 
-      <div id="demo-test-gallery" class="demo-gallery">
+    <br>
 
-        <a href="assets/img/portmap.png" data-size="1600x1068" data-med-size="1024x683">
-          <img src="assets/img/portmap.png" alt="" />
-          <figure>something about this PortGIS image 444</figure>
-        </a>
-
-
-        <a href="assets/img/layer-tree.png" data-size="1600x1068" data-med-size="1024x683">
-          <img src="assets/img/layer-tree.png" alt="" />
-          <figure>something about this PortGIS image 666</figure>
-        </a>
-
-
-        <a href="assets/img/search.png" data-size="1600x1068" data-med-size="1024x683">
-          <img src="assets/img/search.png" alt="" />
-          <figure>something about this PortGIS image 888</figure>
-        </a>
-
-        <a href="assets/img/draw.png" data-size="1600x1068" data-med-size="1024x683">
-          <img src="assets/img/draw.png" alt="" />
-          <figure>something about this PortGIS image 777</figure>
-        </a>
-
-
-        <a href="assets/img/location.png" data-size="1600x1068" data-med-size="1024x683">
-          <img src="assets/img/location.png" alt="" />
-          <figure>something about this PortGIS image</figure>
-        </a>
-
-
-        <a href="assets/img/search.png" data-size="1600x1068" data-med-size="1024x683">
-          <img src="assets/img/search.png" alt="" />
-          <figure>something about this PortGIS image 888</figure>
-        </a>
-
-        <a href="assets/img/print.png" data-size="1600x1068" data-med-size="1024x683">
-          <img src="assets/img/print.png" alt="" />
-          <figure>something about this PortGIS image 777</figure>
-        </a>
-
-
-        <a href="assets/img/bookmark.png" data-size="1600x1068" data-med-size="1024x683">
-          <img src="assets/img/bookmark.png" alt="" />
-          <figure>something about this PortGIS image</figure>
-        </a>
-
+    <div class="slideshow-container">
+      <div class="mySlides1">
+        <img src="assets/img/portmap.png" style="width:100%">
+        <div class="text">Caption Text</div>
       </div>
-    </div>
-  </div>
 
-  <hr>
-
-<!-- Portmap Analyst tiles -->
-  <div class="container">
-
-      <p style="margin-left: 10px;font-size: x-large; color: #363738;"><a href="https://github.com/portofportlandgis/portmap-analyst" target="_blank" style="color:#1c8de0">Portmap Analyst</a></p>
-  
-      <p style="margin-left: 10px; color: #363738;">A responsive web map application template using Bootstrap and Mapbox GL</p>
-  
-      <div class="row" style="justify-content: left;">
-  
-        <div id="demo-test-gallery" class="demo-gallery">
-  
-          <a href="assets/img/portmap.png" data-size="1600x1068" data-med-size="1024x683">
-            <img src="assets/img/portmap.png" alt="" />
-            <figure>something about this PortGIS image 444</figure>
-          </a>
-  
-  
-          <a href="assets/img/portmap.png" data-size="1600x1068" data-med-size="1024x683">
-            <img src="assets/img/portmap.png" alt="" />
-            <figure>something about this PortGIS image 666</figure>
-          </a>
-  
-  
-          <a href="assets/img/portmap.png" data-size="1600x1068" data-med-size="1024x683">
-            <img src="assets/img/portmap.png" alt="" />
-            <figure>something about this PortGIS image 888</figure>
-          </a>
-  
-          <a href="assets/img/portmap.png" data-size="1600x1068" data-med-size="1024x683">
-            <img src="assets/img/portmap.png" alt="" />
-            <figure>something about this PortGIS image 777</figure>
-          </a>
-  
-        </div>
+      <div class="mySlides1">
+        <img src="assets/img/location.png" style="width:100%">
+        <div class="text">Captiokjhkjhkjn Text</div>
       </div>
+
+      <div class="mySlides1">
+        <img src="assets/img/draw.png" style="width:100%">
+        <div class="text">Captikjbjkgon Text</div>
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
     </div>
+    <br>
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
 
     <hr>
 
-    <!-- getElevation API -->
-  <div class="container">
 
-      <p style="margin-left: 10px;font-size: x-large; color: #363738;"><a href="https://github.com/portofportlandgis/getElevationAPI" target="_blank" style="color:#1c8de0">getElevation API</a></p>
-  
-      <p style="margin-left: 10px; color: #363738;">Get global elevation data using Mapbox and AWS Lambda.</p>
-  
-      <div class="row" style="justify-content: left;">
-  
-        <div id="demo-test-gallery" class="demo-gallery">
-  
-          <a href="assets/img/portmap.png" data-size="1600x1068" data-med-size="1024x683">
-            <img src="assets/img/portmap.png" alt="" />
-            <figure>something about this PortGIS image 444</figure>
-          </a>
-  
-  
-          <a href="assets/img/portmap.png" data-size="1600x1068" data-med-size="1024x683">
-            <img src="assets/img/portmap.png" alt="" />
-            <figure>something about this PortGIS image 666</figure>
-          </a>
-  
-  
-          <a href="assets/img/portmap.png" data-size="1600x1068" data-med-size="1024x683">
-            <img src="assets/img/portmap.png" alt="" />
-            <figure>something about this PortGIS image 888</figure>
-          </a>
-  
-          <a href="assets/img/portmap.png" data-size="1600x1068" data-med-size="1024x683">
-            <img src="assets/img/portmap.png" alt="" />
-            <figure>something about this PortGIS image 777</figure>
-          </a>
-  
-        </div>
+    <!-- About Section Heading -->
+    <h2 class="page-section-heading text-center text-secondary mb-0"><a
+        href="https://github.com/portofportlandgis/portmap" target="_blank" style="color:#1c8de0"> Portmap Analyst</a>
+    </h2>
+
+    <br>
+
+    <p style="color: #525252" class="text-center">A responsive web map application template using Bootstrap and MapboxGL
+    </p>
+
+    <br>
+
+
+    <div class="slideshow-container">
+      <div class="mySlides2">
+        <img src="assets/img/portmap.png" style="width:100%">
+        <div class="text">Capt55555t</div>
       </div>
+
+      <div class="mySlides2">
+        <img src="assets/img/draw.png" style="width:100%">
+        <div class="text">Captikjbjkg888888on Text</div>
+      </div>
+
+      <div class="mySlides2">
+        <img src="assets/img/search.png" style="width:100%">
+        <div class="text">Captikjbjk77777gon Text</div>
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
     </div>
 
-  
+
     <hr>
 
-  <div class="section section--first">
+    <!-- About Section Heading -->
+    <h2 class="page-section-heading text-center text-secondary mb-0"><a
+        href="https://github.com/portofportlandgis/portmap" target="_blank" style="color:#1c8de0"> getElevation API</a>
+    </h2>
 
-    <div id="gallery" class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="pswp__bg"></div>
+    <br>
 
-      <div class="pswp__scroll-wrap">
+    <p style="color: #525252" class="text-center">A responsive web map application template using Bootstrap and MapboxGL
+    </p>
 
-        <div class="pswp__container">
-          <div class="pswp__item"></div>
-          <div class="pswp__item"></div>
-          <div class="pswp__item"></div>
-        </div>
-
-        <div class="pswp__ui pswp__ui--hidden">
-
-          <div class="pswp__top-bar">
-
-            <div class="pswp__counter"></div>
-
-            <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-            <!-- <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-            <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button> -->
-
-            <div class="pswp__preloader">
-              <div class="pswp__preloader__icn">
-                <div class="pswp__preloader__cut">
-                  <div class="pswp__preloader__donut"></div>
-                </div>
-              </div>
-            </div>
-          </div>
+    <br>
 
 
-          <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
-          <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
-          <div class="pswp__caption">
-            <div class="pswp__caption__center">
-            </div>
-          </div>
-        </div>
-
-      </div>
 
 
-    </div>
+
 
 </section>
 
@@ -539,13 +450,13 @@
   </div>
 </section>
 
-<!-- photoswipe for photo tiles -->
-<script src="assets/photoswipe/src/js/img-tile.js"></script>
 
 <!-- Bootstrap -->
 <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
   integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<script src="assets/js/slider.js"></script>
 
 </body>
 

@@ -85,7 +85,7 @@ select {
 
 /* Search control */
 .filtr-search {
-  padding: 2px;
+  padding: 8px;
   /* text-transform: uppercase; */
   margin-bottom: 1.2rem;
   font-size: 1rem;
