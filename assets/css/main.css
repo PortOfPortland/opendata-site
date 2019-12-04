@@ -7290,7 +7290,7 @@ button.bg-dark:focus {
   right: 0;
   left: 0;
   z-index: 1030;
-  height: 55px;
+  /* height: 55px; */
 }
 
 .fixed-bottom {
