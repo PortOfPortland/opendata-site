@@ -8,19 +8,19 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Port GIS Data Hub</title>
+  <title>Port of Portland GIS</title>
 
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
   integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
 
+<!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 
 <!-- CSS -->
 <link href="assets/css/main.css" rel="stylesheet">
 <link href="assets/css/filterizr.css" rel="stylesheet" type="text/css">
-<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
 
 <!-- JQuery -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -28,16 +28,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
   integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 
-<!-- slider -->
+<!-- slider CSS -->
 <link href="assets/css/slider.css" rel="stylesheet" type="text/css">
-
-
-<!-- PhotoSwipe Resources -->
-<!-- <link rel="stylesheet" href="assets/photoswipe/src/css/img-tile.css">
-<link rel="stylesheet" href="assets/photoswipe/dist/photoswipe.css">
-<link rel="stylesheet" href="assets/photoswipe/dist/default-skin/default-skin.css">
-<script src="assets/photoswipe/dist/photoswipe.min.js"></script>
-<script src="assets/photoswipe/dist/photoswipe-ui-default.min.js"></script> -->
 
 </head>
 
@@ -95,9 +87,9 @@
     </div>
   </div>
 
-  <!--NOTIFICATION MODAL-->
+  <!-- END NOTIFICATION MODAL-->
 
-  <!-- Navigation -->
+  <!-- Navigation Bar -->
   <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
     <div class="container">
       <a class="navbar-brand">Port of Portland GIS</a>
@@ -143,11 +135,11 @@
     </div>
   </header>
 
-  <!-- Portfolio Section -->
+  <!-- Data Section -->
   <section class="page-section portfolio" id="portfolio">
     <div class="container">
 
-      <!-- Portfolio Section Heading -->
+      <!-- Data Section Heading -->
       <h2 class="page-section-heading text-center text-secondary mb-0">Open Data</h2>
 
       <!-- Icon Divider -->
@@ -163,14 +155,11 @@
           href="https://github.com/portofportlandgis/open-data-json-test" target="_blank" style="color: #1d1d1d;"><i
             class="fab fa-github"></i> GitHub</a>, or search for layers below:</p>
 
-      <!-- Portfolio Grid Items -->
+            <br>
+
+      <!-- Data Grid Items -->
 
       <div class="container">
-        <!-- Filter Controls - Simple Mode -->
-        <!-- Search control -->
-        <!-- <div class="row search-row">
-            <input type="text" class="fltr-controls filtr-search" name="filtr-search" data-search />
-          </div> -->
 
         <div class="row">
 
@@ -188,8 +177,6 @@
         </div>
 
         <div class="row push-down">
-          <!-- This is the set up of a basic gallery, your items must have the categories they belong to in a data-category
-              attribute, which starts from the value 1 and goes up from there -->
 
           <!-- Image size 400 x 600 -->
 
@@ -291,18 +278,15 @@
 
 </section>
 
-<!-- About Section -->
-<!-- <section class="page-section bg-primary text-white mb-0" id="about"> -->
+<!-- Code Section -->
 <section class="page-section bg-primary text-white mb-0">
 
   <div class="container">
 
-    <!-- About Section Heading -->
-    <!-- <h2 class="page-section-heading text-center text-uppercase text-white">code</h2> -->
+    <!-- CodeSection Heading -->
     <h2 class="page-section-heading text-center text-secondary mb-0">Open Code</h2>
 
     <!-- Icon Divider -->
-    <!-- <div class="divider-custom divider-light"> -->
     <div class="divider-custom">
       <div class="divider-custom-line"></div>
       <div class="divider-custom-icon">
@@ -312,19 +296,23 @@
     </div>
 
     <p style="color: #525252" class="text-center">Start building your own GIS applications with the Port's open source
-      code.</p>
-
-    <p style="color: #525252" class="text-center">Find our code at
-      <a href="https://github.com/portofportlandgis" target="_blank" style="color: #1d1d1d;"><i
-          class="fab fa-github"></i> GitHub</a> , or check out the examples below.</p>
+      code. Find our code on <a href="https://github.com/portofportlandgis" target="_blank" style="color: #1d1d1d;"><i
+          class="fab fa-github"></i> GitHub</a>
+      , or check out the examples below.</p>
 
     <br>
   </div>
 
-  <hr>
+  <div class="divider-custom">
+    <div class="divider-custom-line"></div>
+    <div class="divider-custom-icon">
+      <i style="font-size: large;" class="fas fa-globe"></i>
+    </div>
+    <div class="divider-custom-line"></div>
+  </div>
+  
 
-  <!-- PhotoSwipe Tiles -->
-
+  <!-- Portmap tiles -->
   <!-- Portmap tiles -->
   <div class="container">
 
@@ -332,9 +320,12 @@
     <h2 class="page-section-heading text-center text-secondary mb-0"><a
         href="https://github.com/portofportlandgis/portmap" target="_blank" style="color:#1c8de0"> Portmap</a></h2>
 
-   <br>
+    <br>
 
-    <p style="color: #525252" class="text-center">A responsive web map application template using Bootstrap and MapboxGL
+    <p style="color: #525252" class="text-center">A responsive web map application template with built-in geospatial tools using Bootstrap and MapboxGL.
+        Check out the 
+      <a
+        href="https://cdettlaff.github.io./" target="_blank" style="color: #1c8de0;"> demo.</a>
     </p>
 
     <br>
@@ -342,41 +333,64 @@
     <div class="slideshow-container">
       <div class="mySlides1">
         <img src="assets/img/portmap.png" style="width:100%">
-        <div class="text">Caption Text</div>
+        <div class="text">Portmap is a responsive web map application with built in geospatial tools.</div>
       </div>
 
       <div class="mySlides1">
-        <img src="assets/img/location.png" style="width:100%">
-        <div class="text">Captiokjhkjhkjn Text</div>
+        <img src="assets/img/layer-tree.png" style="width:100%">
+        <div class="text">Layer tree allows the user to interactively organize and reposition map layers.</div>
       </div>
 
       <div class="mySlides1">
         <img src="assets/img/draw.png" style="width:100%">
-        <div class="text">Captikjbjkgon Text</div>
+        <div class="text">Supports drawing and editing using Mapbox Draw API.</div>
+      </div>
+
+      <div class="mySlides1">
+        <img src="assets/img/print.png" style="width:100%">
+        <div class="text">Client side Print Export to PNG or PDF with legend.</div>
+      </div>
+
+      <div class="mySlides1">
+        <img src="assets/img/bookmark.png" style="width:100%">
+        <div class="text">Create geo-location bookmarks.</div>
+      </div>
+
+      <div class="mySlides1">
+        <img src="assets/img/location.png" style="width:100%">
+        <div class="text">Location tools for finding addresses and lat/long coordinates.</div>
+      </div>
+
+      <div class="mySlides1">
+        <img src="assets/img/search.png" style="width:100%">
+        <div class="text">Search layer properties with autocomplete and zoom to feature.</div>
       </div>
 
       <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
       <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
     </div>
     <br>
-    <div style="text-align:center">
+    <!-- <div style="text-align:center">
       <span class="dot" onclick="currentSlide(1)"></span>
       <span class="dot" onclick="currentSlide(2)"></span>
       <span class="dot" onclick="currentSlide(3)"></span>
-    </div>
+    </div> -->
 
 
     <hr>
+    <br>
 
-
-    <!-- About Section Heading -->
+    <!--Portmap Analyst Tiles -->
+    <!--Portmap Analyst Tiles -->
     <h2 class="page-section-heading text-center text-secondary mb-0"><a
-        href="https://github.com/portofportlandgis/portmap" target="_blank" style="color:#1c8de0"> Portmap Analyst</a>
+        href="https://github.com/portofportlandgis/portmap-analyst" target="_blank" style="color:#1c8de0"> Portmap Analyst</a>
     </h2>
 
     <br>
 
-    <p style="color: #525252" class="text-center">A responsive web map application template using Bootstrap and MapboxGL
+    <p style="color: #525252" class="text-center">A responsive web map application template with geospatial tools using Turf, Bootstrap and Mapbox GL.
+      It's basically a starting point to easily attach additional Turf.js spatial analysis tools. 
+      What's already included is a lat/lng finder, center of mass, buffer, great circle, polygon grid, feature measurement, and coordinate array.
     </p>
 
     <br>
@@ -402,25 +416,26 @@
       <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
     </div>
 
-
+    <br>
     <hr>
+    <br>
 
-    <!-- About Section Heading -->
+    <!-- getElevation API Tiles -->
+    <!-- getElevation API Tiles -->
     <h2 class="page-section-heading text-center text-secondary mb-0"><a
-        href="https://github.com/portofportlandgis/portmap" target="_blank" style="color:#1c8de0"> getElevation API</a>
+        href="https://github.com/portofportlandgis/getElevationAPI" target="_blank" style="color:#1c8de0"> getElevation API</a>
     </h2>
 
     <br>
 
-    <p style="color: #525252" class="text-center">A responsive web map application template using Bootstrap and MapboxGL
+    <p style="color: #525252" class="text-center">This API returns global elevation values using Mapbox Elevation and
+      AWS Lambda. With Serverless Framework,
+      the API can be deployed to AWS in seconds. Deployment instructions can be found at <a
+        href="https://github.com/portofportlandgis/getElevationAPI" target="_blank" style="color: #1d1d1d;"><i
+          class="fab fa-github"></i> GitHub.</a>
     </p>
 
     <br>
-
-
-
-
-
 
 </section>
 
@@ -450,9 +465,7 @@
   </div>
 </section>
 
-
 <!-- Bootstrap -->
-<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
   integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
