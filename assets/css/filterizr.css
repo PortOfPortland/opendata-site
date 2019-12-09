@@ -21,8 +21,21 @@ img {
   }
 }
 
+.eyeball {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  color: #232323;
+  background-color: #ffffff61;
+  padding: .25rem;
+  border-radius: 10px;
+}
+a:hover {
+  color: #1c8de0;
+}
+
 .item-desc {
-  background-color: #c3c3c3c7;
+  background-color: #ffffffc7;;
   color: white;
   position: absolute;
   /* text-transform: uppercase; */
