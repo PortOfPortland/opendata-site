@@ -36,14 +36,14 @@
 <body id="page-top">
 
   <!--NOTIFICATION MODAL-->
-  <script type="text/javascript">
+  <!-- <script type="text/javascript">
     $(window).on('load', function () {
       $('#disclaimerModal').modal('show');
     });
-  </script>
+  </script> -->
   <!-- Disclaimer Modal -->
   <!-- Disclaimer Modal -->
-  <div id="disclaimerModal" class="modal" role="dialog">
+  <!-- <div id="disclaimerModal" class="modal" role="dialog">
     <div class="modal-dialog">
 
       <div class="modal-content">
@@ -85,34 +85,32 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <!-- END NOTIFICATION MODAL-->
 
   <!-- Navigation Bar -->
   <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
     <div class="container">
-      <a class="navbar-brand">Port of Portland GIS</a>
+      <a class="navbar-brand">Port of Portland</a>
 
-      <div>
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="https://github.com/portofportlandgis"
-              target="_blank"><i class="fab fa-github"></i>
-              GitHub</a>
-          </li>
-        </ul>
+      <div class="navbar-nav">
+
+        <a class="nav-link" href="#data" style="color: white;"> Data</a>
+        <p>|</p>
+        <a class="nav-link" href="#code" style="color: white;"> Code</a>
+        <p>|</p>
+        <a class="nav-link" href="#api" style="color: white;"> API</a>
       </div>
     </div>
   </nav>
 
-  <!-- Masthead -->
   <header class="masthead bg-primary text-center">
 
     <div class="container d-flex align-items-center flex-column">
       <div class="divider-custom" style="margin: 1rem">
 
-        <img src="assets/img/logo.svg" height="80" width="80">
+        <img src="assets/img/port-logo.svg" height="80" width="80">
 
 
       </div>
@@ -136,27 +134,38 @@
   </header>
 
   <!-- Data Section -->
-  <section class="page-section portfolio" id="portfolio">
+  <!-- Data Section -->
+  <!-- Data Section -->
+  <section class="page-section portfolio" id="data">
+
     <div class="container">
 
-      <!-- Data Section Heading -->
-      <h2 class="page-section-heading text-center text-secondary mb-0">Open Data</h2>
+        <hr>
 
-      <!-- Icon Divider -->
       <div class="divider-custom">
-        <div class="divider-custom-line"></div>
-        <div class="divider-custom-icon">
-          <i style="font-size: large;" class="fas fa-layer-group"></i>
-        </div>
-        <div class="divider-custom-line"></div>
+        <img src="assets/img/data-logo.svg" width="110px">
       </div>
+
+      <br>
 
       <p style="color: #525252" class="text-center">Get data directly from <a
           href="https://github.com/portofportlandgis/open-data-json-test" target="_blank" style="color: #1d1d1d;"><i
             class="fab fa-github"></i> GitHub</a>, or search for layers below:</p>
 
       <br>
+      <br>
 
+      <!-- Icon Divider -->
+      <div class="divider-custom">
+        <div class="divider-custom-icon">
+            <i style="font-size: xx-large;" class="fas fa-chevron-circle-down"></i>
+        </div>
+      </div>
+
+      <hr>
+      <br>
+
+      <!-- Data Grid Items -->
       <!-- Data Grid Items -->
 
       <div class="container">
@@ -183,8 +192,8 @@
           <div class="filtr-container">
             <div class="filtr-item" data-category="1" data-sort="mitigation">
               <div class="eyeball"><a
-                  href="https://github.com/portofportlandgis/open-data/blob/master/pop-mitigation-sites.json" target="_blank"><i
-                    class="fas fa-eye"></i></a>
+                  href="https://github.com/portofportlandgis/open-data/blob/master/pop-mitigation-sites.json"
+                  target="_blank"><i class="fas fa-eye"></i></a>
               </div>
               <img class="img-responsive" src="assets/img/mitigation.png" alt="mitigation" />
 
@@ -195,9 +204,9 @@
 
 
             <div class="filtr-item" data-category="1" data-sort="Natural Resource Inventory">
-                <div class="eyeball"><a
-                  href="https://github.com/portofportlandgis/open-data/blob/master/pop-natural-resource-inventory.json" target="_blank"><i
-                    class="fas fa-eye"></i></a>
+              <div class="eyeball"><a
+                  href="https://github.com/portofportlandgis/open-data/blob/master/pop-natural-resource-inventory.json"
+                  target="_blank"><i class="fas fa-eye"></i></a>
               </div>
               <img class="img-responsive" src="assets/img/nri.png" alt="Natural Resource Inventory" />
               <span class="item-desc"><a
@@ -207,7 +216,7 @@
 
 
             <div class="filtr-item" data-category="1" data-sort="Wetlands">
-                <div class="eyeball"><a
+              <div class="eyeball"><a
                   href="https://github.com/portofportlandgis/open-data/blob/master/pop-wetlands.json" target="_blank"><i
                     class="fas fa-eye"></i></a>
               </div>
@@ -219,9 +228,9 @@
 
 
             <div class="filtr-item" data-category="2" data-sort="PDX Enplane Floorplans">
-                <div class="eyeball"><a
-                  href="https://github.com/portofportlandgis/open-data/blob/master/pdx-floor-plan-1.json" target="_blank"><i
-                    class="fas fa-eye"></i></a>
+              <div class="eyeball"><a
+                  href="https://github.com/portofportlandgis/open-data/blob/master/pdx-floor-plan-1.json"
+                  target="_blank"><i class="fas fa-eye"></i></a>
               </div>
               <img class="img-responsive" src="assets/img/floorplan-1.png" alt="PDX Enplane Floorplans" />
               <span class="item-desc"><a
@@ -231,9 +240,9 @@
 
 
             <div class="filtr-item" data-category="2" data-sort="PDX Deplane Floorplans">
-                <div class="eyeball"><a
-                  href="https://github.com/portofportlandgis/open-data/blob/master/pdx-floor-plan-2.json" target="_blank"><i
-                    class="fas fa-eye"></i></a>
+              <div class="eyeball"><a
+                  href="https://github.com/portofportlandgis/open-data/blob/master/pdx-floor-plan-2.json"
+                  target="_blank"><i class="fas fa-eye"></i></a>
               </div>
               <img class="img-responsive" src="assets/img/floorplan-2.png" alt="PDX Deplane Floorplans" />
               <span class="item-desc"><a
@@ -243,9 +252,9 @@
 
 
             <div class="filtr-item" data-category="2" data-sort="PDX Mezzanine Floorplans">
-                <div class="eyeball"><a
-                  href="https://github.com/portofportlandgis/open-data/blob/master/pdx-floor-plan-3.json" target="_blank"><i
-                    class="fas fa-eye"></i></a>
+              <div class="eyeball"><a
+                  href="https://github.com/portofportlandgis/open-data/blob/master/pdx-floor-plan-3.json"
+                  target="_blank"><i class="fas fa-eye"></i></a>
               </div>
               <img class="img-responsive" src="assets/img/floorplan-3.png" alt="PDX Mezzanine Floorplans" />
               <span class="item-desc"><a
@@ -255,9 +264,9 @@
 
 
             <div class="filtr-item" data-category="3" data-sort="PDX Noise Contours 1982">
-                <div class="eyeball"><a
-                  href="https://github.com/portofportlandgis/open-data/blob/master/pdx-noise-contours-1982.json" target="_blank"><i
-                    class="fas fa-eye"></i></a>
+              <div class="eyeball"><a
+                  href="https://github.com/portofportlandgis/open-data/blob/master/pdx-noise-contours-1982.json"
+                  target="_blank"><i class="fas fa-eye"></i></a>
               </div>
               <img class="img-responsive" src="assets/img/pdx-noise-1982.png" alt="PDX Noise Contours 1982" />
               <span class="item-desc"><a
@@ -267,9 +276,9 @@
 
 
             <div class="filtr-item" data-category="3" data-sort="PDX Noise Contours 1990">
-                <div class="eyeball"><a
-                  href="https://github.com/portofportlandgis/open-data/blob/master/pdx-noise-contours-1990.json" target="_blank"><i
-                    class="fas fa-eye"></i></a>
+              <div class="eyeball"><a
+                  href="https://github.com/portofportlandgis/open-data/blob/master/pdx-noise-contours-1990.json"
+                  target="_blank"><i class="fas fa-eye"></i></a>
               </div>
               <img class="img-responsive" src="assets/img/pdx-noise-1990.png" alt="PDX Noise Contours 1990" />
               <span class="item-desc"><a
@@ -279,9 +288,9 @@
 
 
             <div class="filtr-item" data-category="3" data-sort="PDX Noise Contours 1994">
-                <div class="eyeball"><a
-                  href="https://github.com/portofportlandgis/open-data/blob/master/pdx-noise-contours-1994.json" target="_blank"><i
-                    class="fas fa-eye"></i></a>
+              <div class="eyeball"><a
+                  href="https://github.com/portofportlandgis/open-data/blob/master/pdx-noise-contours-1994.json"
+                  target="_blank"><i class="fas fa-eye"></i></a>
               </div>
               <img class="img-responsive" src="assets/img/pdx-noise-1994.png" alt="PDX Noise Contours 1994" />
               <span class="item-desc"><a
@@ -291,9 +300,9 @@
 
 
             <div class="filtr-item" data-category="3" data-sort="PDX Noise Contours 2008">
-                <div class="eyeball"><a
-                  href="https://github.com/portofportlandgis/open-data/blob/master/pdx-noise-contours-2008.json" target="_blank"><i
-                    class="fas fa-eye"></i></a>
+              <div class="eyeball"><a
+                  href="https://github.com/portofportlandgis/open-data/blob/master/pdx-noise-contours-2008.json"
+                  target="_blank"><i class="fas fa-eye"></i></a>
               </div>
               <img class="img-responsive" src="assets/img/pdx-noise-2008.png" alt="PDX Noise Contours 2008" />
               <span class="item-desc"><a
@@ -303,9 +312,9 @@
 
 
             <div class="filtr-item" data-category="1, 4" data-sort="Storm Water Pipes">
-                <div class="eyeball"><a
-                  href="https://github.com/portofportlandgis/open-data/blob/master/pop-stormwater-pipes.json" target="_blank"><i
-                    class="fas fa-eye"></i></a>
+              <div class="eyeball"><a
+                  href="https://github.com/portofportlandgis/open-data/blob/master/pop-stormwater-pipes.json"
+                  target="_blank"><i class="fas fa-eye"></i></a>
               </div>
               <img class="img-responsive" src="assets/img/storm-pipes.png" alt="Storm Water Pipes" />
               <span class="item-desc"><a
@@ -344,190 +353,197 @@
 </section>
 
 <!-- Code Section -->
-<section class="page-section bg-primary text-white mb-0">
+<!-- Code Section -->
+<!-- Code Section -->
+<section class="page-section bg-primary text-white mb-0" id="code">
 
-  <div class="container">
+    <div class="container">
 
-    <!-- CodeSection Heading -->
-    <h2 class="page-section-heading text-center text-secondary mb-0">Open Code</h2>
+    <hr>
+
+    <div class="divider-custom">
+      <img src="assets/img/code-logo.svg" width="120px">
+    </div>
+
+
+
+    <p style="color: #525252" class="text-center">Start building your own applications with the Port's open source
+      code. Explore the examples below.</p>
+
+    <br>
+    <br>
 
     <!-- Icon Divider -->
     <div class="divider-custom">
-      <div class="divider-custom-line"></div>
       <div class="divider-custom-icon">
-        <i style="font-size: large;" class="fas fa-code"></i>
-      </div>
-      <div class="divider-custom-line"></div>
-    </div>
-
-    <p style="color: #525252" class="text-center">Start building your own GIS applications with the Port's open source
-      code. Find our code on <a href="https://github.com/portofportlandgis" target="_blank" style="color: #1d1d1d;"><i
-          class="fab fa-github"></i> GitHub</a>
-      , or check out the examples below.</p>
-
-    <br>
-
-    <div class="divider-custom">
-      <div class="divider-custom-icon">
-        <i style="font-size: x-large;" class="fas fa-chevron-down"></i>
+          <i style="font-size: xx-large;" class="fas fa-chevron-circle-down"></i>
       </div>
     </div>
-  </div>
-
-  <hr>
-  <br>
-
-
-  <!-- Portmap tiles -->
-  <!-- Portmap tiles -->
-  <div class="container">
-
-    <div class="divider-custom">
-      <div class="divider-custom-icon">
-        <i style="font-size: large;" class="fas fa-globe"></i>
-      </div>
-    </div>
-
-    <!-- About Section Heading -->
-    <h2 class="page-section-heading text-center text-secondary mb-0"><a
-        href="https://github.com/portofportlandgis/portmap" target="_blank" style="color:#1c8de0"> Portmap</a></h2>
-
-    <br>
-
-    <p style="color: #525252" class="text-center">A responsive web map application template with built-in geospatial
-      tools using Bootstrap and Mapbox GL.
-      Check out the
-      <a href="https://cdettlaff.github.io./" target="_blank" style="color: #1c8de0;"> demo.</a>
-    </p>
-
-    <br>
-
-    <div class="slideshow-container">
-      <div class="mySlides1">
-        <img src="assets/img/portmap.png" style="width:100%">
-        <div class="text">Portmap is a responsive web map application with built in geospatial tools.</div>
-      </div>
-
-      <div class="mySlides1">
-        <img src="assets/img/layer-tree.png" style="width:100%">
-        <div class="text">Layer tree allows the user to interactively organize and reposition map layers.</div>
-      </div>
-
-      <div class="mySlides1">
-        <img src="assets/img/draw.png" style="width:100%">
-        <div class="text">Supports drawing and editing using Mapbox Draw API.</div>
-      </div>
-
-      <div class="mySlides1">
-        <img src="assets/img/print.png" style="width:100%">
-        <div class="text">Client side Print Export to PNG or PDF with legend.</div>
-      </div>
-
-      <div class="mySlides1">
-        <img src="assets/img/bookmark.png" style="width:100%">
-        <div class="text">Create geo-location bookmarks.</div>
-      </div>
-
-      <div class="mySlides1">
-        <img src="assets/img/location.png" style="width:100%">
-        <div class="text">Location tools for finding addresses and lat/long coordinates.</div>
-      </div>
-
-      <div class="mySlides1">
-        <img src="assets/img/search.png" style="width:100%">
-        <div class="text">Search layer properties with autocomplete and zoom to feature.</div>
-      </div>
-
-      <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
-      <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
-    </div>
-    <br>
-    <!-- <div style="text-align:center">
-      <span class="dot" onclick="currentSlide(1)"></span>
-      <span class="dot" onclick="currentSlide(2)"></span>
-      <span class="dot" onclick="currentSlide(3)"></span>
-    </div> -->
-
 
     <hr>
     <br>
 
+
+    <!-- Portmap tiles -->
+    <!-- Portmap tiles -->
+    <div class="container">
+
+      <!-- About Section Heading -->
+      <h2 class="page-section-heading text-center text-secondary mb-0"><a
+          href="https://github.com/portofportlandgis/portmap" target="_blank" style="color:#1c8de0"> Portmap</a></h2>
+
+      <br>
+
+      <p style="color: #525252" class="text-center">A responsive web map application template with built-in geospatial
+        tools using Bootstrap and Mapbox GL.
+        Check out the
+        <a href="https://cdettlaff.github.io./" target="_blank" style="color: #1c8de0;"> demo.</a>
+      </p>
+
+      <br>
+
+      <div class="slideshow-container">
+        <div class="mySlides1">
+          <img src="assets/img/portmap.png" style="width:100%">
+          <div class="text">Portmap is a responsive web map application with built in geospatial tools.</div>
+        </div>
+
+        <div class="mySlides1">
+          <img src="assets/img/layer-tree.png" style="width:100%">
+          <div class="text">Layer tree allows the user to interactively organize and reposition map layers.</div>
+        </div>
+
+        <div class="mySlides1">
+          <img src="assets/img/draw.png" style="width:100%">
+          <div class="text">Supports drawing and editing using Mapbox Draw API.</div>
+        </div>
+
+        <div class="mySlides1">
+          <img src="assets/img/print.png" style="width:100%">
+          <div class="text">Client side Print Export to PNG or PDF with legend.</div>
+        </div>
+
+        <div class="mySlides1">
+          <img src="assets/img/bookmark.png" style="width:100%">
+          <div class="text">Create geo-location bookmarks.</div>
+        </div>
+
+        <div class="mySlides1">
+          <img src="assets/img/location.png" style="width:100%">
+          <div class="text">Location tools for finding addresses and lat/long coordinates.</div>
+        </div>
+
+        <div class="mySlides1">
+          <img src="assets/img/search.png" style="width:100%">
+          <div class="text">Search layer properties with autocomplete and zoom to feature.</div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+      </div>
+      <br>
+
+      <hr>
+      <br>
+
+      <!--Portmap Analyst Tiles -->
+      <!--Portmap Analyst Tiles -->
+      <h2 class="page-section-heading text-center text-secondary mb-0"><a
+          href="https://github.com/portofportlandgis/portmap-analyst" target="_blank" style="color:#1c8de0"> Portmap
+          Analyst</a>
+      </h2>
+
+      <br>
+
+      <p style="color: #525252" class="text-center">A responsive web map application template with geospatial tools
+        using
+        Turf, Bootstrap and Mapbox GL.
+        It's basically a starting point to easily attach additional Turf.js spatial analysis tools.
+        What's already included is a lat/lng finder, center of mass, buffer, great circle, polygon grid, feature
+        measurement, and coordinate array. Check it out at <a
+          href="https://github.com/portofportlandgis/portmap-analyst" target="_blank" style="color: #1d1d1d;"><i
+            class="fab fa-github"></i> GitHub.</a>
+      </p>
+
+      <br>
+
+
+      <div class="slideshow-container">
+        <div class="mySlides2">
+          <img src="assets/img/edit.png" style="width:100%">
+          <div class="text">Edit, export, or drag-n-drop JSON files.</div>
+        </div>
+
+        <div class="mySlides2">
+          <img src="assets/img/buffer.png" style="width:100%">
+          <div class="text">Buffer selected features.</div>
+        </div>
+
+        <div class="mySlides2">
+          <img src="assets/img/grid.png" style="width:100%">
+          <div class="text">Create custom grids.</div>
+        </div>
+
+        <div class="mySlides2">
+          <img src="assets/img/measure.png" style="width:100%">
+          <div class="text">Live measurements as you draw features. </div>
+        </div>
+
+        <div class="mySlides2">
+          <img src="assets/img/great-circle.png" style="width:100%">
+          <div class="text">Create and calcualte distances of great circles.</div>
+        </div>
+
+        <div class="mySlides2">
+          <img src="assets/img/center-of-mass.png" style="width:100%">
+          <div class="text">Identify the center of mass of a feature.</div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+      </div>
+
+      <br>
+
+      <br>
+
+</section>
+
+<!-- API Section -->
+<!-- API Section -->
+<!-- API Section -->
+<section class="page-section portfolio" id="portfolio">
+
+  <div class="container" id="api">
+
+    <hr>
+
+    <div class="divider-custom">
+      <img src="assets/img/api-logo.svg" width="80px">
+    </div>
+
+    <p style="color: #525252" class="text-center">Connect to Port APIs or deploy your own. Check out the examples below and start connecting to the Port today.</p>
+
+    <br>
+    <br>
+
+    <!-- Icon Divider -->
     <div class="divider-custom">
       <div class="divider-custom-icon">
-        <i style="font-size: large;" class="fas fa-globe"></i>
+        <i style="font-size: xx-large;" class="fas fa-chevron-circle-down"></i>
       </div>
     </div>
 
-    <!--Portmap Analyst Tiles -->
-    <!--Portmap Analyst Tiles -->
-    <h2 class="page-section-heading text-center text-secondary mb-0"><a
-        href="https://github.com/portofportlandgis/portmap-analyst" target="_blank" style="color:#1c8de0"> Portmap
-        Analyst</a>
-    </h2>
-
-    <br>
-
-    <p style="color: #525252" class="text-center">A responsive web map application template with geospatial tools using
-      Turf, Bootstrap and Mapbox GL.
-      It's basically a starting point to easily attach additional Turf.js spatial analysis tools.
-      What's already included is a lat/lng finder, center of mass, buffer, great circle, polygon grid, feature
-      measurement, and coordinate array. Check it out at <a href="https://github.com/portofportlandgis/portmap-analyst"
-        target="_blank" style="color: #1d1d1d;"><i class="fab fa-github"></i> GitHub.</a>
-    </p>
-
-    <br>
-
-
-    <div class="slideshow-container">
-      <div class="mySlides2">
-        <img src="assets/img/edit.png" style="width:100%">
-        <div class="text">Edit, export, or drag-n-drop JSON files.</div>
-      </div>
-
-      <div class="mySlides2">
-        <img src="assets/img/buffer.png" style="width:100%">
-        <div class="text">Buffer selected features.</div>
-      </div>
-
-      <div class="mySlides2">
-        <img src="assets/img/grid.png" style="width:100%">
-        <div class="text">Create custom grids.</div>
-      </div>
-
-      <div class="mySlides2">
-        <img src="assets/img/measure.png" style="width:100%">
-        <div class="text">Live measurements as you draw features. </div>
-      </div>
-
-      <div class="mySlides2">
-        <img src="assets/img/great-circle.png" style="width:100%">
-        <div class="text">Create and calcualte distances of great circles.</div>
-      </div>
-
-      <div class="mySlides2">
-        <img src="assets/img/center-of-mass.png" style="width:100%">
-        <div class="text">Identify the center of mass of a feature.</div>
-      </div>
-
-      <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
-      <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
-    </div>
-
-    <br>
     <hr>
     <br>
 
-    <div class="divider-custom">
-      <div class="divider-custom-icon">
-        <i style="font-size: large;" class="fas fa-globe"></i>
-      </div>
-    </div>
+    <!-- getElevation API-->
+    <!-- getElevation API-->
+    <!-- getElevation API-->
 
-    <!-- getElevation API Tiles -->
-    <!-- getElevation API Tiles -->
     <h2 class="page-section-heading text-center text-secondary mb-0"><a
-        href="https://github.com/portofportlandgis/getElevationAPI" target="_blank" style="color:#1c8de0"> getElevation
-        API</a>
+        href="https://github.com/portofportlandgis/getElevationAPI" target="_blank" style="color:#1c8de0">
+        getElevation</a>
     </h2>
 
     <br>
@@ -552,13 +568,15 @@
     <hr>
     <br>
 
+  </div>
+
 </section>
 
 <!-- Footer -->
-<footer class="footer text-center">
+<!-- <footer class="footer text-center">
   <div class="container">
     <div class="row">
-      <!-- Footer Icons -->
+
       <div class="col-lg-4 mb-5 mb-lg-0">
         <h4 class="text-uppercase mb-4">connect</h4>
         <a class="btn btn-outline-light btn-social mx-1" href="mailto:gis@portofportland.com">
@@ -571,12 +589,14 @@
 
     </div>
   </div>
-</footer>
+</footer> -->
 
 <!-- Copyright Section -->
 <section class="copyright py-4 text-center text-white">
   <div class="container">
-    <small>Copyright &copy; Port of Portland</small>
+    <small>Copyright &copy; Port of Portland </small>
+
+    <small> | terms of use</small>
   </div>
 </section>
 
