@@ -62,7 +62,7 @@ a:hover {
   cursor: pointer;
   display: inline-block;
   /* text-transform: uppercase; */
-  padding: .5rem .5rem;
+  padding: .4rem .4rem;
 }
 .simplefilter li {
   background-color: #c3c3c3;
@@ -73,6 +73,7 @@ a:hover {
   background-color: #1c8de0;
   color: white;
   font-weight: 900;
+  margin-bottom: 5px;
 }
 .multifilter li {
   background-color: #4b9eff;

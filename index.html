@@ -174,13 +174,14 @@
         <div class="row">
 
           <!-- search box -->
-          <input type="text" placeholder="Search" class="fltr-controls filtr-search" name="filtr-search" data-search />
-          &nbsp
+          <!-- <input type="text" placeholder="Search" class="fltr-controls filtr-search" name="filtr-search" data-search />
+          &nbsp -->
           <!-- catagory buttons -->
           <ul class="simplefilter">
             <li class="fltr-controls active" data-filter="all">All</li>
             <li class="fltr-controls" data-filter="1">Environmental</li>
             <li class="fltr-controls" data-filter="2">Floorplans</li>
+            <li class="fltr-controls" data-filter="5">Property</li>
             <li class="fltr-controls" data-filter="3">Airport</li>
             <li class="fltr-controls" data-filter="4">Utility</li>
           </ul>
@@ -205,10 +206,10 @@
 
 
             <div class="filtr-item" data-category="1" data-sort="Natural Resource Inventory">
-              <div class="eyeball"><a
+              <!-- <div class="eyeball"><a
                   href="https://github.com/portofportlandgis/open-data/blob/master/pop-natural-resource-inventory.json"
                   target="_blank"><i class="fas fa-eye"></i></a>
-              </div>
+              </div> -->
               <img class="img-responsive" src="assets/img/nri.png" alt="Natural Resource Inventory" />
               <span class="item-desc"><a
                   href="https://raw.githubusercontent.com/portofportlandgis/open-data/master/pop-natural-resource-inventory.json"
@@ -313,15 +314,42 @@
 
 
             <div class="filtr-item" data-category="1, 4" data-sort="Storm Water Pipes">
-              <div class="eyeball"><a
+              <!-- <div class="eyeball"><a
                   href="https://github.com/portofportlandgis/open-data/blob/master/pop-stormwater-pipes.json"
                   target="_blank"><i class="fas fa-eye"></i></a>
-              </div>
+              </div> -->
               <img class="img-responsive" src="assets/img/storm-pipes.png" alt="Storm Water Pipes" />
               <span class="item-desc"><a
                   href="https://raw.githubusercontent.com/portofportlandgis/open-data/master/pop-stormwater-pipes.json"
                   download="monster.json" target="_blank">Storm Water Pipes</a></span>
             </div>
+
+
+
+            <div class="filtr-item" data-category="5" data-sort="Port Boundaries">
+              <!-- <div class="eyeball"><a
+                  href="https://github.com/portofportlandgis/open-data/blob/master/pop-property-boundary.json"
+                  target="_blank"><i class="fas fa-eye"></i></a>
+              </div> -->
+              <img class="img-responsive" src="assets/img/pop-property-boundary.png" alt="Port Boundaries" />
+              <span class="item-desc"><a
+                  href="https://raw.githubusercontent.com/portofportlandgis/open-data/master/pop-property-boundary.json"
+                  download="data.json" target="_blank">Port Boundaries</a></span>
+            </div>
+  
+  
+            <div class="filtr-item" data-category="5" data-sort="Port Tax Lots">
+              <!-- <div class="eyeball"><a
+                  href="https://github.com/portofportlandgis/open-data/blob/master/pop-tax-lots.json"
+                  target="_blank"><i class="fas fa-eye"></i></a>
+              </div> -->
+              <img class="img-responsive" src="assets/img/pop-tax-lot.png" alt="Port Tax Lots" />
+              <span class="item-desc"><a
+                  href="https://raw.githubusercontent.com/portofportlandgis/open-data/master/pop-tax-lots.json"
+                  download="data.json" target="_blank">Port Tax Lots</a></span>
+            </div>
+
+
           </div>
         </div>
 
