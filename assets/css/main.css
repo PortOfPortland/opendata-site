@@ -422,7 +422,7 @@ hr {
   margin-bottom: 3rem;
   border: 0;
   max-width: 90%;
-  border-top: 0.125rem solid rgba(97, 97, 97, 0.1);
+  border-top: 0.125rem solid rgba(97, 97, 97, 0.4);
 }
 
 small,
