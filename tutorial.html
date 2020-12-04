@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Port of Portland | Open Source</title>
+  <link rel="shortcut icon" href="favicon.svg" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
+    integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet"
+    type="text/css">
+
+  <!-- CSS -->
+  <link href="assets/css/tutorial.css" rel="stylesheet">
+  <!-- <link href="assets/css/prism.css" rel="stylesheet"> -->
+  <!-- <link href="assets/css/prism-dark.css" rel="stylesheet"> -->
+  <link href="assets/css/prism-default.css" rel="stylesheet">
+  <link href="assets/css/sidebar.css" rel="stylesheet">
+
+  <!-- prismjs -->
+  <script src="assets/js/prism.js"></script>
+
+  <!-- JQuery -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+
+  <!-- slider CSS -->
+  <link href="assets/css/slider.css" rel="stylesheet" type="text/css">
+
+  <style></style>
+
+</head>
+
+<body id="page-top">
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="https://opensource.portofportland.io/" target="_blank">Open Source</a>
+
+      <div class="navbar-nav">
+        <img src="assets/img/port-logo-white.svg" width="160">
+
+      </div>
+    </div>
+  </nav>
+
+  <div class="sidenav">
+
+    <a href="#gettingStarted">Getting Started</a> 
+
+    <a href="#part1">Part 1: Download PortMap</a>  
+
+    <a href="#part2">Part 2: Initiate Map</a>
+
+    <a href="#part3">Part 3: Download Data</a>
+
+    <a href="#part4">Part 4: Add Data</a>
+
+    <a href="#part5">Part 5: Highlight Data</a>
+
+    <a href="#part6">Part 6: Identify Data</a>
+
+    <a href="#part7">Part 7: Search Data</a>
+
+    <a href="#nextSteps">Next Steps</a>
+
+  </div>
+
+  <!-- The Tutorial -->
+  <!-- The Tutorial -->
+  <!-- The Tutorial -->
+
+  <br>
+  <br>
+
+  <section class="page-section portfolio" style="margin-left: 225px;" id="code">
+
+    <div class="container" style="padding-left: 40px; padding-right: 40px;">
+
+
+      <!-- intro -->
+      <!-- intro -->
+      <!-- intro -->
+      <!-- intro -->
+
+      <br>      
+
+      <h1 class="page-section-heading text-secondary mb-0" style="font-size: xxx-large;">PortMap Tutorial</h1>
+
+      <br>
+      <br>
+
+      <p style="color: #525252">Welcome to the PortMap Tutorial! This tutorial was designed to teach you how access PortMap, add geographic data, and make that data interactive.
+        You can find more information about <b>PortMap</b>
+        <a href="https://github.com/portofportlandgis/portmap" target="_blank" style="color: #1c8de0;"><i
+            class="fa fa-link"></i> <b>here</b></a>.
+      This tutorial was not designed to teach you how to code. However, you do not need coding experience to follow this tutorial. Each step will guide on
+      how to get PortMap up and running. Our hope is that this tutorial will grow your curiosity in coding, geography, and mapping applications. We encourage you 
+      to continue building your knowledge after you complete this tutorial. 
+
+      <br>
+      <br>
+
+      There are many online resources that offer free HTML and JavaScript (JS) lessons. The links below are just a couple offered by 
+      <a href="https://www.w3schools.com/" target="_blank" style="color: #1c8de0;"><i class="fas fa-link"></i><b> w3schools</b></a>:
+
+      </p>
+
+      <br>
+
+        <ul style="color: #525252; line-height: 2em;">
+          <li><a href="https://www.w3schools.com/html/" target="_blank" style="color: #1c8de0;"><i class="fas fa-link"></i><b> HTML Tutorial</b></a></li>
+          <li><a href="https://www.w3schools.com/js/default.asp" target="_blank" style="color: #1c8de0;"><i class="fas fa-link"></i><b> JavaScript Tutorial</b></a></li>
+        </ul>  
+        
+      </p>
+
+
+      <br>
+      <hr id="gettingStarted">
+      <br>
+
+      <!-- getting started -->
+      <!-- getting started -->
+      <!-- getting started -->
+      <!-- getting started -->
+      <h2 class="page-section-heading text-secondary mb-0">Getting Started</h2>
+
+      <br>
+
+      <p style="color: #525252">There are some resources you'll need before starting the PortMap tutorial:</p>
+
+      <br>
+
+      <p style="color: #525252">1. A text editor for writing HTML and JS. There are a few text editors out there free to download. Below are some great options:</p>
+
+      <br>
+
+      <ul style="color: #525252; line-height: 2em;">
+        <li><a href="https://code.visualstudio.com/Download" target="_blank" style="color: #1c8de0;"><i class="fas fa-link"></i><b> Visual Studios Code</b></a></li>
+        <li><a href="https://www.sublimetext.com/" target="_blank" style="color: #1c8de0;"><i class="fas fa-link"></i><b> Sublime Text</b></a></li>
+        <li><a href="https://atom.io/" target="_blank" style="color: #1c8de0;"><i class="fas fa-link"></i><b> Atom</b></a></li>
+      </ul>  
+
+      <br>
+
+      <p style="color: #525252">2. A Mapbox Account. Go over to <a href="https://www.mapbox.com/" target="_blank" style="color: #1c8de0;"><b><i class="fas fa-link"></i> Mapbox</b></a> and create an account.</p>
+
+      <br>
+
+      <p style="color: #525252">3. A Mapbox <b>Access Token</b>. PortMap is built with Mapbox GL JS and you'll need an <b>Access Token</b> to pull its resources. You can find your <b>Access Token</b> 
+      in your Mapbox Account.</p>
+
+      <br>
+
+      <br>
+      <hr id="part1">
+      <br>
+
+
+
+      <!-- Part 1-->
+      <!-- Part 1-->
+      <!-- Part 1-->
+      <!-- Part 1-->
+      <h2 class="page-section-heading text-secondary mb-0">Part 1: Download PortMap</h2>
+
+      <br>
+
+      <p style="color: #525252">Go over to
+        <a href="https://github.com/portofportlandgis/portmap" target="_blank" style="color: #1c8de0;"><i
+            class="fab fa-github"></i> <b>Github</b></a> to find the repository for PortMap.
+      </p>
+
+      <br>
+
+      <p style="color: #525252">There are a several ways you can access PortMap's code, but in this example you'll simply download a zipped file and save 
+        to your computer. Unzip the <b>portmap-master</b> file when the download is complete.</p>
+
+      <br>
+
+      <img src="assets/img/git-download-dialog.png" width="260">
+
+      <br>
+      <br>
+      <br>
+
+      <p style="color: #525252">Copy the unzipped  <i class="fa fa-folder"></i><b> portmap-master </b> folder somewhere on your computer's file system. For example, use 
+        <b>C Drive</b> on Windows or <b>/documnets</b> on Mac OS.   
+      </p>
+
+      <br>
+
+      <br>
+      <hr id="part2">
+      <br>
+
+
+
+      <!-- Part 2-->
+      <!-- Part 2-->
+      <!-- Part 2-->
+      <!-- Part 2-->
+      <h2 class="page-section-heading text-secondary mb-0">Part 2: Initiate Map </h2>
+
+      <br>  
+
+      <p style="color: #525252">You'll need your Mapbox Access Token in order to associate your account with Mapbox resources used in PortMap. 
+        Refer back to the <a href="#gettingStarted" style="color: #1c8de0;"><b>Getting Started</b></a> section for more information about Mapbox Access Tokens.</p>
+
+      <br>  
+      <br> 
+
+      <p style="color: #525252">
+        In your favorite text editor, open <i class="fa fa-folder-open"></i><b> portmap-master > </b> <i class="fa fa-folder-open"></i><b> assets > </b> 
+        <i class="fa fa-folder-open"></i><b> js > </b> <i class="fa fa-file"></i><b> map.js</b> 
+      </p>
+
+      <br> 
+      <br> 
+
+
+      <p style="color: #525252"> Now copy and paste your <b>Mapbox Access Token</b> between the apostrophes found on the first line and save</p>
+
+      <br> 
+
+<!-- CODE BLOCK -->
+<!-- CODE BLOCK -->
+<pre>
+<code class="language-js">
+mapboxgl.accessToken = 'paste mapbox access token here';
+</code>
+</pre>
+
+      <br>
+
+      <p style="color: #525252">Now you'll need to run PortMap on a server or a localhost. Running a localhost is a popular way developers test, create, and run code.
+      This tutorial will not show you how to run a localhost. Running a localhost can vary depending on working environment or operating system i.e. Mac OS or Windows.
+      There are so many tutorials out there that can help guide you through the process. YouTube video tutorials is a great place to start.</p>
+
+      <br>   
+      
+      <p style="color: #525252">When you have your localhost running you should see PortMap fully operational in our browser:</p>
+
+      <br>   
+
+      <img src="assets/img/portmap-intro.png" width="560">
+
+      <br>  
+
+      <br>
+      <hr id="part3">
+      <br>
+
+
+
+      <!-- Part 3-->
+      <!-- Part 3-->
+      <!-- Part 3-->
+      <!-- Part 3-->
+      <h2 class="page-section-heading text-secondary mb-0">Part 3: Download Data</h2>
+
+      <br>
+
+      <p style="color: #525252">Now that you have PortMap running on a localhost, it's time to add some geographic data to PortMap.</p>
+
+      <br>
+
+      <p style="color: #525252">
+        This tutorial will show you how to add GeoJSON data into PortMap. More information about the
+        GeoJSON data format can be found <a href="https://geojson.org/" target="_blank" style="color: #1c8de0;">
+          <i class="fas fa-link"></i> <b>here</b>.</a> Go ahead and download this GeoJSON file that contains major lakes from around the world:
+      </p>
+      <br>
+
+      <p style="color: #525252; font-size: x-large;">
+        <a href="assets/download/lakes.geojson" target="_blank" style="color: #1c8de0;">
+          <i class="fas fa-download"></i> <b>Download Data</b>.</a>
+      </p>
+
+      <br>
+
+      <p style="color: #525252">
+        Save the <b>lakes.geojson</b> file to the following folder: <i class="fa fa-folder-open"></i><b> portmap-master > </b> <i class="fa fa-folder-open"></i><b> assets > </b> 
+        <i class="fa fa-folder-open"></i><b> json</b>
+      </p>
+
+      <br>
+      <hr id="part4">
+      <br>
+
+
+
+      <!-- Part 4-->
+      <!-- Part 4-->
+      <!-- Part 4-->
+      <!-- Part 4-->
+      <h2 class="page-section-heading text-secondary mb-0">Part 4: Add Data</h2>
+
+      <br>
+
+      <p style="color: #525252">Time to add some geographic data to the PortMap! There are three parts to adding data in PortMap. First is adding a data source.
+        Second is adding the data source layer configuration. Third is connecting the data to the interactive Layer Tree. The Layer Tree is a plugin built for PortMap that 
+        allows the user to turn layers on and off. You can find more information about the Layer Tree Plugin 
+        <a href="https://github.com/TheGartrellGroup/Mapbox-GL-JS-Layer-Tree" target="_blank" style="color: #1c8de0;"><i
+        class="fas fa-link"></i> <b>here</b>.</a> Lets start with adding the data source:</p>
+
+      <br>
+
+      <p style="color: #525252">
+        In your text editor, open <i class="fa fa-folder-open"></i><b> portmap-master > </b> <i class="fa fa-folder-open"></i><b> assets > </b> 
+        <i class="fa fa-folder-open"></i><b> js > </b> <i class="fa fa-file"></i><b> map.js</b>
+      </p>
+
+      <br>
+
+      <p style="color: #525252">Use your text editor's search feature and search for the following lines of code in <i class="fa fa-file"></i><b> map.js</b> <p>
+
+      <br>
+
+<!-- CODE BLOCK -->
+<!-- CODE BLOCK -->
+<pre>
+  <code class="language-js">
+    map.on('load', function () {
+
+      //monster layers
+      //Mr. Claw layer sources
+      map.addSource('monster', { type: 'geojson', data: emptyGJ });
+      map.addSource('mouth', { type: 'geojson', data: emptyGJ });
+      map.addSource('water-line', { type: 'geojson', data: emptyGJ });
+      map.addSource('eyes', { type: 'geojson', data: emptyGJ });
+  
+      map.addLayer({
+          "id": "monster",
+          "type": "fill",
+          "source": "monster",
+          "layout": {
+        //"visibility": 'none'
+          },
+          "paint": {
+              'fill-color': '#b30000',
+              'fill-opacity': 1.0
+          }
+      });
+  </code>
+</pre>
+
+      <br>
+
+      <p style="color: #525252">Now lets add the data source:<p>
+
+      <br>
+
+<!-- CODE BLOCK -->
+<!-- CODE BLOCK -->
+<pre>
+  <code class="language-js">
+    map.on('load', function () {
+
+      //ADD THE CODE BELOW
+      //lake data source
+      map.addSource('lakes', { type: 'geojson', data: emptyGJ });
+      //ADD THE CODE ABOVE
+
+      //monster layers
+      //Mr. Claw layer sources
+      map.addSource('monster', { type: 'geojson', data: emptyGJ });
+      map.addSource('mouth', { type: 'geojson', data: emptyGJ });
+      map.addSource('water-line', { type: 'geojson', data: emptyGJ });
+      map.addSource('eyes', { type: 'geojson', data: emptyGJ });
+  
+      map.addLayer({
+          "id": "monster",
+          "type": "fill",
+          "source": "monster",
+          "layout": {
+        //"visibility": 'none'
+          },
+          "paint": {
+              'fill-color': '#b30000',
+              'fill-opacity': 1.0
+          }
+      });
+  </code>
+</pre>
+
+      <br>
+
+      <p style="color: #525252">Now add the data layer configuration:<p>
+
+      <br>
+
+<!-- CODE BLOCK -->
+<!-- CODE BLOCK -->
+<pre>
+<code class="language-js">
+map.on('load', function () {
+
+//lake data source
+map.addSource('lakes', { type: 'geojson', data: emptyGJ });
+
+//ADD THE CODE BELOW
+map.addLayer({
+  "id": "lakesData",
+  "type": "fill",
+  "source": "lakes",
+  "layout": {
+//"visibility": 'none'
+  },
+  "paint": {
+      'fill-color': 'blue',
+      'fill-opacity': 1.0
+  }
+});
+//ADD THE CODE ABOVE
+</code>
+</pre>
+
+      <br>
+
+      <p style="color: #525252">Now it's time to connect the data source and layer configuration to the Layer Tree. 
+        Use your text editor's search feature and search for the following lines of code:<p>
+
+      <br>
+
+<!-- CODE BLOCK -->
+<!-- CODE BLOCK -->
+<pre>
+<code class="language-js">
+  // organize layers in the layer tree
+  var layers =
+  
+  [
+</code>
+</pre>
+
+        <br>
+
+        <p style="color: #525252">Finally, add the Layer Tree configuration code for the Lakes data:<p>
+
+        <br>
+
+<!-- CODE BLOCK -->
+<!-- CODE BLOCK -->
+<pre>
+<code class="language-js">
+// organize layers in the layer tree
+var layers =
+
+[
+
+    //ADD THE CODE BELOW
+    {
+        'name': 'Lakes',
+        'id': 'lakesData',
+        'source': 'lakes',
+        'path': 'assets/json/lakes.geojson',
+        'directory': 'Physical',
+    },
+    //ADD THE CODE ABOVE
+</code>
+</pre>
+
+
+      <br>   
+            
+      <p style="color: #525252">Save your file and refresh the browser. You can now see the Lakes render on the map! Additionally, you can toggle the Lakes layer on and off in the 
+      Layer Tree:</p>
+
+      <br>   
+
+      <img src="assets/img/portmap-add-data.png" width="560">
+
+      <br>
+
+
+      <br>
+      <hr id="part5">
+      <br>
+
+
+      <!-- Part 5-->
+      <!-- Part 5-->
+      <!-- Part 5-->
+      <!-- Part 5-->
+      <h2 class="page-section-heading text-secondary mb-0">Part 5: Highlight Data</h2>
+
+      <br>
+
+      <p style="color: #525252">Time to make your data interactive. In this section you'll add code that lets the user click any Lake on the map to highlight the feature.
+        Again, use your text editor's search feature to find the code below in <i class="fa fa-file"></i><b> map.js</b><p>
+
+      <br>
+
+<!-- CODE BLOCK -->
+<!-- CODE BLOCK -->
+<pre>
+<code class="language-js">
+// organize layers in the layer tree
+var layers =
+
+[
+
+map.on('mousemove', function (e) {
+  var features = map.queryRenderedFeatures(e.point, {
+      layers: ['ocean', 'river', 'country', 'populated', 'monster', 'octo']
+  });
+  map.getCanvas().style.cursor = (features.length) ? 'default' : '';
+});
+</code>
+</pre>
+
+      <br>
+
+      <p style="color: #525252">The code above is simply telling the mouse cursor to change to a pointer when the cursor hovers over a data feature.
+        Follow the example below to add the Lakes data:<p>
+
+      <br>
+
+<!-- CODE BLOCK -->
+<!-- CODE BLOCK -->
+<pre>
+<code class="language-js">
+
+  layers: ['ocean', 'river', 'country', 'populated', 'monster', 'octo', 'lakesData']
+
+</code>
+</pre>
+
+      <br>
+
+      <p style="color: #525252">Finally, you'll add code that will highlight a Lake feature anytime you click on a Lake in the map.<p>
+
+      <br>
+
+<!-- CODE BLOCK -->
+<!-- CODE BLOCK -->
+<pre>
+<code class="language-js">
+
+  //cursor = pointer on hover configuration
+  map.on('mousemove', function (e) {
+      var features = map.queryRenderedFeatures(e.point, {
+          layers: ['ocean', 'river', 'country', 'populated', 'monster', 'octo', 'lakesData']
+      });
+      map.getCanvas().style.cursor = (features.length) ? 'default' : '';
+  });
+
+  //Highlight Features Function
+  //Highlight Features Function
+  //Highlight Features Function
+  //Highlight Features Function
+
+  //ADD THE CODE BELOW
+  map.on(touchEvent, function (e) {
+      var features = map.queryRenderedFeatures(e.point, { layers: ["lakesData"] });
+
+      if (map.getLayer("lakesData_hl")) {
+          map.removeLayer("lakesData_hl");
+      }
+
+      if (features.length) {
+
+          map.addLayer({
+              "id": "lakesData_hl",
+              "type": "line",
+              "source": "lakes",
+              "layout": {},
+              "paint": {
+                  "line-color": "cyan",
+                  "line-width": 3
+              },
+              "filter": ["==", "name", features[0].properties.name],
+          });
+      }
+  });
+  //ADD THE CODE ABOVE
+
+</code>
+</pre>
+
+
+      <br>   
+                  
+      <p style="color: #525252">Save your file and refresh your browser. Try clicking on a Lake to see it highlight:</p>
+
+      <br>   
+
+      <img src="assets/img/portmap-highlight.png" width="560">
+
+      <br>
+
+      <br>
+
+      <br>
+      <hr id="part6">
+      <br>
+
+      <!-- Part 6-->
+      <!-- Part 6-->
+      <!-- Part 6-->
+      <h2 class="page-section-heading text-secondary mb-0">Part 6: Identify Data</h2>
+      <br>
+
+      <p style="color: #525252">In this section you'll link the Lake GeoJSON properties with PortMap's Identify Tool.
+        First, in your text editor, open <i class="fa fa-folder-open"></i><b> portmap-master > </b> <i class="fa fa-folder-open"></i><b> assets > </b> 
+        <i class="fa fa-folder-open"></i><b> json > </b> <i class="fa fa-file"></i><b> lakes.geojson</b> <p>
+
+      <br>
+
+      <p style="color: #525252">Take notice of how the GeoJSON is structured, particularly the nested <b>"properties"</b> of each Lake feature.
+      This is were you'll find information about each of the lakes in the GeoJSON. Below is a segment from the <i class="fa fa-file"></i><b> lakes.geojson</b> file:</p>
+
+      <br>
+
+<!-- CODE BLOCK -->
+<!-- CODE BLOCK -->
+<pre>
+  <code class="language-js">
+  
+    {
+      "type": "FeatureCollection",
+      "features": [
+          {
+              "type": "Feature",
+              "properties": {
+                  "scalerank": 9,
+                  "name": "Egridir",
+                  "name_abb": "Egridir",
+                  "name_alt": null,
+                  "note": null,
+                  "delta": "New or modified in version 1.2",
+                  "dam_name": null,
+                  "year": -99,
+                  "admin": null,
+                  "featureclass": "Lake"
+              },
+              "geometry": {
+                  "type": "Polygon",
+                  "coordinates": [
+                      [
+                          [
+                              30.809772560176526,
+                              38.27068831058753
+                          ], ......
+        
+  </code>
+  </pre>
+  
+        <br>
+  
+        <p style="color: #525252">Now it's time to connect the Lake GeoJSON properties with the Identify Tool.
+
+          <br>
+          <br> 
+
+          In your text editor, open <i class="fa fa-folder-open"></i><b> portmap-master > </b> <i class="fa fa-folder-open"></i><b> assets > </b> 
+          <i class="fa fa-folder-open"></i><b> js > </b> <i class="fa fa-file"></i><b> map.js</b> 
+
+          <br> 
+          <br> 
+
+          Use your text editor's search feature and search for the following lines of code:<p>
+  
+        <br>
+
+<!-- CODE BLOCK -->
+<!-- CODE BLOCK -->
+<pre>
+<code class="language-js">
+
+  //Layer Info function
+  map.on(touchEvent, function (e) {
+
+      document.getElementById("layer-attribute").innerHTML = "";
+
+  });
+
+  map.on(touchEvent, function (e) {
+
+      var popup = new mapboxgl.Popup();
+      var feature;
+      var append = document.getElementById('layer-attribute');
+</code>
+</pre>
+
+      <br>
+
+      <p style="color: #525252">Update <i class="fa fa-file"></i><b> map.js</b> with the code below. Notice how you use <b>feature.properties.name</b> 
+        to access the GeoJSON properties.<p>
+
+      <br>
+
+<!-- CODE BLOCK -->
+<!-- CODE BLOCK -->
+<pre>
+<code class="language-js">
+
+  map.on(touchEvent, function (e) {
+
+    var popup = new mapboxgl.Popup();
+    var feature;
+    var append = document.getElementById('layer-attribute');
+
+    //ADD THE CODE ABOVE
+    if (map.queryRenderedFeatures(e.point, { layers: ['lakesData'] }).length) {
+
+        feature = map.queryRenderedFeatures(e.point, { layers: ['lakesData'] })[0];
+
+        append.innerHTML +=
+              '<h5>Lakes</h5>' +
+              '<hr>' +
+              '<b>Name: </b>' + feature.properties.name +
+              '<hr>' 
+    }
+    //ADD THE CODE ABOVE
+</code>
+</pre>
+
+
+      <br>   
+                  
+      <p style="color: #525252">Save your file and refresh your browser. In PortMap, open the Layer Attributes dialog, or the <i class="fa fa-info"></i> button. 
+        Now click any of the lakes on the map. The GeoJSON properties you previously coded are now visible.</p>
+
+      <br>   
+
+      <img src="assets/img/portmap-identify.png" width="560">
+
+      <br>
+
+      <br>
+      <hr id="part7">
+      <br>
+
+      <!-- Part 7-->
+      <!-- Part 7-->
+      <!-- Part 7-->
+      <h2 class="page-section-heading text-secondary mb-0">Part 7: Search Data</h2>
+
+      <br>  
+
+      <p style="color: #525252">Finally, in this section you'll connect the Lake data to PortMap's Search Data function.</p>
+
+      <br>  
+
+      <p style="color: #525252">
+        In your text editor, open <i class="fa fa-folder-open"></i><b> portmap-master > </b> <i class="fa fa-folder-open"></i><b> assets > </b> 
+        <i class="fa fa-folder-open"></i><b> plugins > </b><i class="fa fa-folder-open"></i><b> jsonSearch > 
+        <i class="fa fa-folder-open"></i><b> json > </b> </b> <i class="fa fa-file"></i><b> layers.json</b>
+        
+      </p>
+
+      <br> 
+
+      <p style="color: #525252">Now add the Lake data configuration in the <i class="fa fa-file"></i><b> layers.json</b> file.
+      Use the code snippet below as an example:</p>
+
+      <br> 
+      <br> 
+
+<!-- CODE BLOCK -->
+<!-- CODE BLOCK -->
+<pre>
+  <code class="language-js">
+  
+    {
+      "Layers": [
+        {
+          "source": "ne_50m_populated_places_simple",
+          "display_name": "Populated Place",
+          "name": "populated",
+          "catagory": "Cultural",
+          "type": "point"
+        },
+    
+        {
+          "source": "ne_110m_admin_0_map_units",
+          "display_name": "Country",
+          "name": "country",
+          "catagory": "Cultural",
+          "type": "polygon"
+        },
+    
+        {
+          "source": "ne_110m_rivers_lake_centerlines",
+          "display_name": "River",
+          "name": "river",
+          "catagory": "Physical",
+          "type": "line"
+        },
+    
+        {
+          "source": "ne_110m_geography_marine_polys",
+          "display_name": "Ocean",
+          "name": "ocean",
+          "catagory": "Physical",
+          "type": "polygon"
+        },
+    
+        {
+          "source": "lakes",
+          "display_name": "Lakes",
+          "name": "populated",
+          "catagory": "Physical",
+          "type": "polygon"
+        }
+    
+      ]
+    }
+  
+  </code>
+  </pre>
+  
+      <br>
+
+      <br>   
+                  
+      <p style="color: #525252">Save your file and refresh your browser. In PortMap, open the Search dialog, or the <i class="fa fa-search"></i> button. 
+        Now try using the search tools to find a lake:</p>
+
+      <br>   
+
+      <img src="assets/img/portmap-search.png" width="560">
+
+
+      <br>
+      <hr id="nextSteps">
+      <br>
+
+      <!-- Next Steps -->
+      <!-- Next Steps -->
+      <!-- Next Steps -->
+      <!-- Next Steps -->
+      <h2 class="page-section-heading text-secondary mb-0">Next Steps</h2>
+
+      <br>
+
+      <p style="color: #525252">Hopefully you found this tutorial useful. Explore the links below to see how you can personalize PortMap, or better yet, build your own open source application!</p>
+
+      <br>
+
+      <ul style="color: #525252; line-height: 2em;">
+        <li>For more information on Mapbox GL JS, check out the <a href="https://docs.mapbox.com/mapbox-gl-js/api/" target="_blank" style="color: #1c8de0;"><i class="fas fa-link"></i><b> API Reference</b></a></li>
+
+        <li>To learn how to change the appearance of data on the map, check out the <a href="https://docs.mapbox.com/mapbox-gl-js/style-spec/" target="_blank" style="color: #1c8de0;"><i class="fas fa-link"></i><b> Style Specifications</b></a></li>
+
+        <li>Try expanding PortMap's capabilities by adding a <a href="https://docs.mapbox.com/mapbox-gl-js/plugins/" target="_blank" style="color: #1c8de0;"><i class="fas fa-link"></i><b> Plugin</b></a></li>
+
+        <li>Or build your own application using Mapbox GL JS <a href="https://docs.mapbox.com/mapbox-gl-js/example/" target="_blank" style="color: #1c8de0;"><i class="fas fa-link"></i><b> Examples</b></a></li>
+      </ul>  
+
+      <br>
+
+      <br>
+      <hr>
+      <br>
+
+
+  </section>
+
+
+  <!-- Copyright Section -->
+  <!-- Copyright Section -->
+  <!-- Copyright Section -->
+  <section class="copyright py-4 text-center text-white">
+    <div class="container">
+      <small>Copyright &copy; Port of Portland </small>
+
+      <!-- <small> | terms of use</small> -->
+    </div>
+  </section>
+
+  <!-- Bootstrap -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+  <!-- <script src="assets/js/slider.js"></script> -->
+
+</body>
+
+</html>
