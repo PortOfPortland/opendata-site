@@ -724,10 +724,8 @@ map.on('mousemove', function (e) {
         feature = map.queryRenderedFeatures(e.point, { layers: ['lakesData'] })[0];
 
         append.innerHTML +=
-              '<h5>Lakes</h5>' +
-              '<hr>' +
-              '<b>Name: </b>' + feature.properties.name +
-              '<hr>' 
+              'Name:' + ' ' + feature.properties.name 
+
     }
     //ADD THE CODE ABOVE
 </code>
@@ -762,7 +760,7 @@ map.on('mousemove', function (e) {
 
       <p style="color: #525252">
         In your text editor, open <i class="fa fa-folder-open"></i><b> portmap-master > </b> <i class="fa fa-folder-open"></i><b> assets > </b> 
-        <i class="fa fa-folder-open"></i><b> plugins > </b><i class="fa fa-folder-open"></i><b> jsonSearch > 
+        <i class="fa fa-folder-open"></i><b> libs > </b><i class="fa fa-folder-open"></i><b> jsonSearch > 
         <i class="fa fa-folder-open"></i><b> json > </b> </b> <i class="fa fa-file"></i><b> layers.json</b>
         
       </p>
