@@ -65,9 +65,10 @@ a:hover {
   padding: .4rem .4rem;
 }
 .simplefilter li {
-  background-color: #c3c3c3;
+  background-color: #e4e4e4;
   /* height: 21px; */
-  color: #ffffff;
+  border-radius: 4px;
+  color: #808080;
 }
 .simplefilter li.active {
   background-color: #1c8de0;
